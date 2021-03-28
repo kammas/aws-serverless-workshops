@@ -1,0 +1,17 @@
+Create Cloud9 workspace
+Create empty sam project (sam init)
+Install dependencies of app (npm install)
+Start Lambda locally (sam local start-api --port 8080)
+Run tests locally (npm run test)
+Build SAM (sam build)
+Deploy SAM on cloud (sam deploy --guided)
+Create git repository on Code Commit and push code (aws codecommit create-repository --repository-name sam-app)
+Create CDK project locally (cdk init --language typescript)
+Install CDK modules locally for codedeploy/build/pipeline/s3 (npm install --save @aws-cdk/aws-codedeploy @aws-cdk/aws-codebuild)
+-Artifacts bucket
+-Code Commit stage (to pass code to downstream stages)
+-Build stage (buildspec.yml file - can have tests on pre-build)
+-Deploy Stage
+-Traffic-shifted deployment preference (green/blue or other)
+Build CDK project (npm run build)
+Deploy CDK on cloud (cdk deploy)
